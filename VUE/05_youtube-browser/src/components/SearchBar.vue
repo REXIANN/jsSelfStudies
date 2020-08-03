@@ -1,7 +1,7 @@
 <template>
-  <div class="search-bar">
+  <div >
     <h2>SearchBar Here</h2>
-    <input type="text" @keypress.enter="onInput">
+    <input class="search-bar" type="text" @keypress.enter="onInput">
   </div>
 </template>
 
@@ -19,12 +19,13 @@ export default {
 </script>
 
 <style>
-div.search-bar {
+input.search-bar {
   text-align: center;
   margin: 20px;
+  border: 2px solid green;
 }
 
-div.search-bar > input {
+input.search-bar > input {
   width: 75%;
 }
 </style>

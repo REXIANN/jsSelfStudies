@@ -1,10 +1,11 @@
-<template>
+<templates>
   <div>
     <h1>Ping</h1>
     <input @keyup.enter="sendToPong" v-model="inputText" type="text">
-
+    <button @click="mm">buttons</button>
+    <button @click="mmm">buttons</button>
   </div>
-</template>
+</templates>
 
 <script>
 export default {
@@ -15,6 +16,12 @@ export default {
     }
   },
   methods: {
+    mm() {
+      this.$router.push({ path: 'register', query: { plan: 'private'}})
+    },
+    mmm() {
+      this.$router.push('/')
+    },
     sendToPong: function () {
       this.$router.push({name:'Pong', query: {message: this.inputText}})
       // this.$router.push(`pong?message=${this.inputText}`)
